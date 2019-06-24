@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\IconManager;F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\App;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -115,6 +116,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HeadlessAppWin.cpp" />
+    <ClCompile Include="IconManager\NamedPipe.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="NamedPipeWin.cpp" />
+    <ClCompile Include="TrayIconHandler.cpp" />
+    <ClCompile Include="TrayIconHandlerWin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App\HeadlessApp.h" />
+    <ClInclude Include="HeadlessAppWin.h" />
+    <ClInclude Include="NamedPipeWin.h" />
+    <ClInclude Include="Pipes\NamedPipe.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="TrayIconHandler.h" />
+    <ClInclude Include="TrayIconHandlerWin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AnyBarWin.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
