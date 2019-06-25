@@ -38,6 +38,7 @@ TrayIconHandler(
 
 TrayIconHandlerWin::~TrayIconHandlerWin()
 {
+    ids.erase(id);
     if (!notifyData.hWnd) {
         return;
     }
