@@ -1,5 +1,7 @@
 #include  "Protocol.h"
 
+namespace Protocol
+{
 std::vector<char> Protocol::packMessage(CommandType command, const std::string& parameter)
 {
     std::size_t dataSize = sizeof(int32_t) + sizeof(int32_t) + parameter.length();
@@ -33,3 +35,5 @@ std::pair<Protocol::CommandType, std::string> Protocol::unpackMessage(const char
     std::string parameter(data, length);
     return {static_cast<CommandType>(cmd), parameter};
 }
+}
+
