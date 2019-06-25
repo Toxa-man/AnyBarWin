@@ -2,6 +2,10 @@
 #include "Windows.h"
 #include "HeadlessApp.h"
 
+/**
+ * \brief Windows specialization on base HeadlessApp
+ * 
+ */
 class HeadlessAppWin :
     public HeadlessApp
 {
@@ -16,6 +20,12 @@ public:
 
     HWND getHWnd() const;
 private:
+    /**
+     * \brief Initialize window via CreateWindows and returns HWND handle to it
+     * \return HWND descriptor of create window
+     * 
+     * This function calls ExitProcess() if it fails to create window
+     */
     HWND initWindow() const;
     void regClass() const;
     static LRESULT CALLBACK handleEvent(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

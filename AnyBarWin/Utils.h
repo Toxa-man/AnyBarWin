@@ -22,6 +22,13 @@ namespace Utils
 #endif
             ;
 
+        /**
+         * \brief Determines the type category of T and perfoms relevant conversions to const char* 
+         * \tparam T argument type
+         * \param t argument value
+         * 
+         * This function uses if constexpr feature from c++17
+         */
         template<typename T>
         void print(T&& t)
         {
@@ -40,6 +47,13 @@ namespace Utils
     }
 
 
+    /**
+     * \brief 
+     * \tparam Args Parameter pack of arguments to be printed
+     * \param args 
+     * 
+     * This function uses fold expressions feature from c++17
+     */
     template <typename... Args>
     void debug(Args&&... args)
     {
