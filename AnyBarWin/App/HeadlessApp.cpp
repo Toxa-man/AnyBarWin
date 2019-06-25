@@ -10,14 +10,21 @@ void HeadlessApp::startEventLoop()
         auto pipe = makePipe("anyBar", NamedPipe::Read);
 
         auto data = pipe->read();
-        auto[command, message] = Protocol::unpackMessage(data.data(), data.size());
 
-        switch (command) {
-        case Protocol::Icon: iconHandler->changeIcon(message); break;
-        case Protocol::Path: iconHandler->setPicture(message); break;
-        case Protocol::Quit: exit = true; break;
-        default:
-            Utils::debug("Wrong type of command: ", command);
+        try {
+            auto[command, message] = Protocol::unpackMessage(data.data(), data.size());
+            switch (command) {
+            case Protocol::Icon: iconHandler->changeIcon(message); break;
+            case Protocol::Path: iconHandler->setPicture(message); break;
+            case Protocol::Quit: exit = true; break;
+            default:
+                Utils::debug("Wrong type of command: ", command);
+            }
         }
+        catch (const std::runtime_error& e) {
+            Utils::debug(e.what());
+        }
+
+
     }
 }
