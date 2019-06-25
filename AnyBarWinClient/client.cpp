@@ -7,8 +7,9 @@ int main(int argc, char* argv[])
     if (argc < 2 || argc > 3) {
         std::cout << "Usage: " << std::endl << std::endl <<
             "  " << "anybar" << " <image_name>" << std::endl <<
-            "  " << "anybar" << " path" << " <path_to_file>" << std::endl << std::endl;
-        std::cout << "available images: transparent, white, red, green, blue, question";
+            "  " << "anybar" << " path" << " <path_to_file>" << std::endl <<
+            "  " << "anybar" << " quit" << std::endl << std::endl;
+        std::cout << "available images: transparent, white, red, green, blue, question" << std::endl;
         return -1;
     }
     NamedPipeWin pipe("anyBar", NamedPipe::Write);
