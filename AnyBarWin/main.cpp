@@ -11,12 +11,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
 
-
     HeadlessAppWin::setHInstance(hInstance);
     std::unique_ptr<HeadlessApp> app = std::make_unique<HeadlessAppWin>();
     app->startEventLoop();
-
-    // HeadlessApp& appz = HeadlessAppWin();
     return 0;
 
 }
