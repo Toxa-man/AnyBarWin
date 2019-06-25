@@ -35,7 +35,7 @@ private:
      */
     UINT id = 0;
     /**
-     * \brief Container that contains all handlers' id
+     * \brief Contains all handlers' id
      */
     static std::set<UINT> ids;
     NOTIFYICONDATA notifyData {};

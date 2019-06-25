@@ -4,6 +4,8 @@
 
 /**
  * \brief Represents the manager of unique icon in OS
+ * 
+ * The class satisfies the requirements of MoveConstructible and MoveAssignable, but not the requirements of either CopyConstructible or CopyAssignable.
  */
 class TrayIconHandler
 {
