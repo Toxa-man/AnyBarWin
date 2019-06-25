@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{6CACC87E-AF99-40C1-BB19-E3E1B0A785CD}</ProjectGuid>
-    <RootNamespace>AnyBarWin</RootNamespace>
+    <ProjectGuid>{F0272925-E15E-4A8F-B9BF-37FA242D1DC1}</ProjectGuid>
+    <RootNamespace>AnyBarWinClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -76,9 +76,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\IconManager;F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\App;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>F:\dev\AnyBarWin\AnyBarWin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -86,8 +89,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>F:\dev\AnyBarWin\AnyBarWin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -97,11 +104,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>F:\dev\AnyBarWin\AnyBarWin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -112,43 +121,25 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>F:\dev\AnyBarWin\AnyBarWin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="App\HeadlessApp.cpp" />
-    <ClCompile Include="App\HeadlessAppWin.cpp" />
-    <ClCompile Include="IconManager\TrayIconHandler.cpp" />
-    <ClCompile Include="IconManager\TrayIconHandlerWin.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pipes\NamedPipe.cpp" />
-    <ClCompile Include="Pipes\NamedPipeWin.cpp" />
-    <ClCompile Include="Protocol\Protocol.cpp" />
+    <ClCompile Include="..\AnyBarWin\Pipes\NamedPipe.cpp" />
+    <ClCompile Include="..\AnyBarWin\Pipes\NamedPipeWin.cpp" />
+    <ClCompile Include="..\AnyBarWin\Protocol\Protocol.cpp" />
+    <ClCompile Include="client.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="App\HeadlessApp.h" />
-    <ClInclude Include="App\HeadlessAppWin.h" />
-    <ClInclude Include="IconManager\TrayIconHandler.h" />
-    <ClInclude Include="IconManager\TrayIconHandlerWin.h" />
-    <ClInclude Include="Pipes\NamedPipe.h" />
-    <ClInclude Include="Pipes\NamedPipeWin.h" />
-    <ClInclude Include="Protocol\Protocol.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Utils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="AnyBarWin.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\blue.ico" />
-    <Image Include="Assets\green.ico" />
-    <Image Include="Assets\question.ico" />
-    <Image Include="Assets\red.ico" />
-    <Image Include="Assets\white.ico" />
+    <ClInclude Include="..\AnyBarWin\Pipes\NamedPipe.h" />
+    <ClInclude Include="..\AnyBarWin\Pipes\NamedPipeWin.h" />
+    <ClInclude Include="..\AnyBarWin\Protocol\Protocol.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

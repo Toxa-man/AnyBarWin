@@ -1,6 +1,11 @@
 #pragma once
 #include <functional>
-#include <debugapi.h>
+#ifdef _WIN32
+#include "Windows.h"
+#endif
+#ifdef __linux__
+#include <stdio.h>
+#endif
 #include <string>
 
 namespace Utils
@@ -16,35 +21,21 @@ namespace Utils
             = puts
 #endif
             ;
-        template <typename T>
-        std::enable_if_t<std::is_convertible_v<std::decay_t<T>, const char*>>
-            print(T&& t)
-        {
-            debugFunc(t);
-        }
 
-        template <typename T>
-        std::enable_if_t<std::is_same_v<std::decay_t<T>, char>>
-            print(T&& t)
+        template<typename T>
+        void print(T&& t)
         {
-            std::string str{ t };
-            debugFunc(str.c_str());
-        }
-
-        template <typename T>
-        std::enable_if_t<
-            std::is_arithmetic_v<std::decay_t<T>> &&
-            !std::is_same_v<std::decay_t<T>, char>>
-            print(T&& t)
-        {
-            debugFunc(std::to_string(t).c_str());
-        }
-
-        template <typename T>
-        std::enable_if_t<std::is_same_v<std::decay_t<T>, std::string>>
-            print(T&& t)
-        {
-            debugFunc(t.c_str());
+            if constexpr (std::is_convertible_v<std::decay_t<T>, const char*>){
+                debugFunc(t);
+            } else if constexpr (std::is_same_v<std::decay_t<T>, char>){
+                std::string str{ t };
+                debugFunc(str.c_str());
+            } else if constexpr (std::is_arithmetic_v<std::decay_t<T>> &&
+                !std::is_same_v<std::decay_t<T>, char > ) {
+                debugFunc(std::to_string(t).c_str());
+            } else if constexpr (std::is_same_v<std::decay_t<T>, std::string>){
+                debugFunc(t.c_str());
+            }
         }
     }
 
@@ -54,6 +45,7 @@ namespace Utils
     {
         using Details::print;
         (..., print(std::forward<Args>(args)));
+        print('\n');
 
     }
 }

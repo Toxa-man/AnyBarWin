@@ -1,33 +1,67 @@
 #include "TrayIconHandlerWin.h"
 #include "../resource.h"
 #include "HeadlessAppWin.h"
+#include "../Utils.h"
 
 std::set<UINT> TrayIconHandlerWin::ids {};
 std::mt19937 TrayIconHandlerWin::generator{ std::random_device{}() };
 
 TrayIconHandlerWin::TrayIconHandlerWin(HWND hWnd):
-    id{ getNewId() }
+TrayIconHandler(
 {
-    auto defaultIcon = loadIcon(0);
+        {"white", IDI_WHITE},
+        {"red", IDI_RED},
+        {"green", IDI_GREEN},
+        {"blue", IDI_BLUE},
+        {"question", IDI_QUEST}
+        }
+                ),
+    id{ getNewId() }
+    
+{
+    auto defaultIcon = loadIcon("white");
 
     if (!defaultIcon) {
-        OutputDebugStringA((std::string("Failed to load icon with id: ") + std::to_string(IDI_TRANSPARENT_ICON)).c_str());
-        OutputDebugStringA((std::string("last error: ") + std::to_string(GetLastError())).c_str());
+        Utils::debug("Failed to load icon with id: ", strToIconId("white"));
+        Utils::debug("last error: ", GetLastError());
         return;
     }
 
-    nidApp.cbSize = sizeof(NOTIFYICONDATA); // sizeof the struct in bytes
-    nidApp.hWnd = (HWND)hWnd;              //handle of the window which will process this app. messages
-    nidApp.uID = id;           //ID of the icon that willl appear in the system tray
-    nidApp.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP; //ORing of all the flags
-    nidApp.hIcon = defaultIcon; // handle of the Icon to be displayed, obtained from LoadIcon
-    strcpy_s(nidApp.szTip, "test_tooltip");
-    Shell_NotifyIcon(NIM_ADD, &nidApp);
+    notifyData.cbSize = sizeof(NOTIFYICONDATA);
+    notifyData.hWnd = hWnd;        
+    notifyData.uID = id;          
+    notifyData.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
+    notifyData.hIcon = defaultIcon;
+    strcpy_s(notifyData.szTip, "It Works!");
+    Shell_NotifyIcon(NIM_ADD, &notifyData);
 }
 
 TrayIconHandlerWin::~TrayIconHandlerWin()
 {
-    Shell_NotifyIcon(NIM_DELETE, &nidApp);
+    if (!notifyData.hWnd) {
+        return;
+    }
+    Shell_NotifyIcon(NIM_DELETE, &notifyData);
+}
+
+TrayIconHandlerWin::TrayIconHandlerWin(TrayIconHandlerWin&& other) noexcept : TrayIconHandler(other.iconMapper)
+{
+    id = other.id;
+    notifyData = other.notifyData;
+    other.notifyData = {};
+}
+
+TrayIconHandlerWin& TrayIconHandlerWin::operator=(TrayIconHandlerWin&& other) noexcept
+{
+    if (this == &other) {
+        return *this;
+    }
+    Shell_NotifyIcon(NIM_DELETE, &notifyData);
+    id = other.id;
+    notifyData.hWnd = other.notifyData.hWnd;
+    notifyData = other.notifyData;
+    other.notifyData.hWnd = nullptr;
+    return *this;
 }
 
 void TrayIconHandlerWin::changeIcon(const std::string& iconName)
@@ -36,8 +70,8 @@ void TrayIconHandlerWin::changeIcon(const std::string& iconName)
     if (!iconHandle) {
         return;
     }
-    nidApp.hIcon = iconHandle;
-    Shell_NotifyIcon(NIM_MODIFY, &nidApp);
+    notifyData.hIcon = iconHandle;
+    Shell_NotifyIcon(NIM_MODIFY, &notifyData);
 }
 
 void TrayIconHandlerWin::setPicture(const std::string& path)
@@ -59,11 +93,11 @@ HICON TrayIconHandlerWin::loadIcon(const std::string& iconName)
 
 UINT TrayIconHandlerWin::getNewId()
 {
-    std::uniform_int_distribution<UINT> distrib(0, (std::numeric_limits<UINT>::max)());
+    std::uniform_int_distribution<UINT> distribution(0, (std::numeric_limits<UINT>::max)());
     UINT result;
     do
     {
-        result = distrib(generator);
+        result = distribution(generator);
     } while (ids.find(result) != ids.end());
     ids.insert(result);
     return result;

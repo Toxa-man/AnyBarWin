@@ -10,16 +10,16 @@ class TrayIconHandlerWin :
 public:
     explicit TrayIconHandlerWin(HWND hWnd);
     ~TrayIconHandlerWin();
+    TrayIconHandlerWin(TrayIconHandlerWin&& other) noexcept;
+    TrayIconHandlerWin& operator = (TrayIconHandlerWin&& other) noexcept;
     void changeIcon(const std::string& iconName) override;
     void setPicture(const std::string& path) override;
 private:
-    static HICON loadIcon(const std::string& iconName);
+    HICON loadIcon(const std::string& iconName);
     static UINT getNewId();
     static std::mt19937 generator;
-    const UINT id = 0;
-    HWND hWnd;
-    UINT current_icon_id = 0;
+    UINT id = 0;
     static std::set<UINT> ids;
-    NOTIFYICONDATA nidApp;
+    NOTIFYICONDATA notifyData {};
 };
 
