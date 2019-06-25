@@ -116,21 +116,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="HeadlessAppWin.cpp" />
+    <ClCompile Include="App\HeadlessAppWin.cpp" />
     <ClCompile Include="IconManager\NamedPipe.cpp" />
+    <ClCompile Include="IconManager\TrayIconHandler.cpp" />
+    <ClCompile Include="IconManager\TrayIconHandlerWin.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NamedPipeWin.cpp" />
-    <ClCompile Include="TrayIconHandler.cpp" />
-    <ClCompile Include="TrayIconHandlerWin.cpp" />
+    <ClCompile Include="Pipes\NamedPipeWin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App\HeadlessApp.h" />
-    <ClInclude Include="HeadlessAppWin.h" />
-    <ClInclude Include="NamedPipeWin.h" />
+    <ClInclude Include="App\HeadlessAppWin.h" />
+    <ClInclude Include="IconManager\TrayIconHandler.h" />
+    <ClInclude Include="IconManager\TrayIconHandlerWin.h" />
     <ClInclude Include="Pipes\NamedPipe.h" />
+    <ClInclude Include="Pipes\NamedPipeWin.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="TrayIconHandler.h" />
-    <ClInclude Include="TrayIconHandlerWin.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AnyBarWin.rc" />

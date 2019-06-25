@@ -1,5 +1,5 @@
 #include "TrayIconHandlerWin.h"
-#include "resource.h"
+#include "../resource.h"
 #include "HeadlessAppWin.h"
 
 std::set<UINT> TrayIconHandlerWin::ids {};

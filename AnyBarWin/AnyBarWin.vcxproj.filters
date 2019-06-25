@@ -18,19 +18,19 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HeadlessAppWin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NamedPipeWin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TrayIconHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TrayIconHandlerWin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="IconManager\NamedPipe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="App\HeadlessAppWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IconManager\TrayIconHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IconManager\TrayIconHandlerWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipes\NamedPipeWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,19 +41,22 @@
     <ClInclude Include="App\HeadlessApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HeadlessAppWin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Pipes\NamedPipe.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NamedPipeWin.h">
+    <ClInclude Include="App\HeadlessAppWin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TrayIconHandler.h">
+    <ClInclude Include="IconManager\TrayIconHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TrayIconHandlerWin.h">
+    <ClInclude Include="IconManager\TrayIconHandlerWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pipes\NamedPipeWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
