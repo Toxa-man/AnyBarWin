@@ -12,7 +12,7 @@ namespace Utils
 {
     namespace Details
     {
-        static std::function<void(const char*)> OSPrintFunc
+        inline std::function<void(const char*)> OSPrintFunc
 
 #ifdef _WIN32
             = OutputDebugString
