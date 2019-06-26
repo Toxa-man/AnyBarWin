@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makepipe',['makePipe',['../class_headless_app.html#a0f1a7c169c7389de8d7326f8696c6265',1,'HeadlessApp']]]
+  ['namedpipewin',['NamedPipeWin',['../class_named_pipe_win.html#ac43c88e6e61f99e9da191dfca46d9518',1,'NamedPipeWin']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iconhandler',['iconHandler',['../class_headless_app.html#acff0ff632a065a380a2d9d6ada64d90d',1,'HeadlessApp']]]
+  ['makepipe',['makePipe',['../class_headless_app.html#a0f1a7c169c7389de8d7326f8696c6265',1,'HeadlessApp']]]
 ];

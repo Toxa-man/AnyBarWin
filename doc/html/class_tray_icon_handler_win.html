@@ -120,12 +120,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ffc044d568f168d77ae02c2444dbee2"><td class="memItemLeft" align="right" valign="top"><a id="a9ffc044d568f168d77ae02c2444dbee2"></a>
 <a class="el" href="class_tray_icon_handler_win.html">TrayIconHandlerWin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_tray_icon_handler_win.html">TrayIconHandlerWin</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="separator:a9ffc044d568f168d77ae02c2444dbee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0408a5b62521fd6ce9a08d1df9662e79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler_win.html#a0408a5b62521fd6ce9a08d1df9662e79">changeIcon</a> (const std::string &amp;iconName) override</td></tr>
-<tr class="memdesc:a0408a5b62521fd6ce9a08d1df9662e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon to icon with name iconName.  <a href="#a0408a5b62521fd6ce9a08d1df9662e79">More...</a><br /></td></tr>
-<tr class="separator:a0408a5b62521fd6ce9a08d1df9662e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1df6ee060cd5314a2ffae20216b24d99"><td class="memItemLeft" align="right" valign="top"><a id="a1df6ee060cd5314a2ffae20216b24d99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPicture</b> (const std::string &amp;path) override</td></tr>
-<tr class="separator:a1df6ee060cd5314a2ffae20216b24d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba68236eb1b746fdf6913a91198cbda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler_win.html#a9ba68236eb1b746fdf6913a91198cbda">setIconByName</a> (const std::string &amp;iconName) override</td></tr>
+<tr class="memdesc:a9ba68236eb1b746fdf6913a91198cbda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon using name iconName.  <a href="#a9ba68236eb1b746fdf6913a91198cbda">More...</a><br /></td></tr>
+<tr class="separator:a9ba68236eb1b746fdf6913a91198cbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae84aa5f408b1ff3af1aa4bc0e39bc2"><td class="memItemLeft" align="right" valign="top"><a id="a5ae84aa5f408b1ff3af1aa4bc0e39bc2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setIconByPath</b> (const std::string &amp;path) override</td></tr>
+<tr class="separator:a5ae84aa5f408b1ff3af1aa4bc0e39bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b9fa7e01356cb82f8d07445be3a0a"><td class="memItemLeft" align="right" valign="top"><a id="a475b9fa7e01356cb82f8d07445be3a0a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setShellNotifyIcon</b> (HICON hIcon)</td></tr>
+<tr class="separator:a475b9fa7e01356cb82f8d07445be3a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_tray_icon_handler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_tray_icon_handler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_tray_icon_handler.html">TrayIconHandler</a></td></tr>
 <tr class="memitem:a352726314ab7f58aee3c4a0a2c2f7cee inherit pub_methods_class_tray_icon_handler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a352726314ab7f58aee3c4a0a2c2f7cee">TrayIconHandler</a> (const std::unordered_map&lt; std::string, int32_t &gt; &amp;mapper)</td></tr>
 <tr class="memdesc:a352726314ab7f58aee3c4a0a2c2f7cee inherit pub_methods_class_tray_icon_handler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using mapper.  <a href="class_tray_icon_handler.html#a352726314ab7f58aee3c4a0a2c2f7cee">More...</a><br /></td></tr>
@@ -157,8 +160,8 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents Windows-specific tray handler. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0408a5b62521fd6ce9a08d1df9662e79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0408a5b62521fd6ce9a08d1df9662e79">&#9670;&nbsp;</a></span>changeIcon()</h2>
+<a id="a9ba68236eb1b746fdf6913a91198cbda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba68236eb1b746fdf6913a91198cbda">&#9670;&nbsp;</a></span>setIconByName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,7 +170,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void TrayIconHandlerWin::changeIcon </td>
+          <td class="memname">void TrayIconHandlerWin::setIconByName </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>iconName</em></td><td>)</td>
@@ -181,7 +184,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </table>
 </div><div class="memdoc">
 
-<p>Changes icon to icon with name iconName. </p>
+<p>Changes icon using name iconName. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">iconName</td><td></td></tr>
@@ -189,13 +192,13 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_tray_icon_handler.html#ab4502afe419fd30402e5e6e7552dc7ec">TrayIconHandler</a>.</p>
+<p>Implements <a class="el" href="class_tray_icon_handler.html#a1ae98672dfd4b677314a5c328f7f75b4">TrayIconHandler</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>IconManager/<a class="el" href="_tray_icon_handler_win_8h_source.html">TrayIconHandlerWin.h</a></li>
-<li>IconManager/TrayIconHandlerWin.cpp</li>
+<li>AnyBarWin/IconManager/<a class="el" href="_tray_icon_handler_win_8h_source.html">TrayIconHandlerWin.h</a></li>
+<li>AnyBarWin/IconManager/TrayIconHandlerWin.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

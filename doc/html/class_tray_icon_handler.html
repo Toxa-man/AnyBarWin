@@ -116,12 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a352726314ab7f58aee3c4a0a2c2f7cee">TrayIconHandler</a> (const std::unordered_map&lt; std::string, int32_t &gt; &amp;mapper)</td></tr>
 <tr class="memdesc:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using mapper.  <a href="#a352726314ab7f58aee3c4a0a2c2f7cee">More...</a><br /></td></tr>
 <tr class="separator:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4502afe419fd30402e5e6e7552dc7ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#ab4502afe419fd30402e5e6e7552dc7ec">changeIcon</a> (const std::string &amp;iconName)=0</td></tr>
-<tr class="memdesc:ab4502afe419fd30402e5e6e7552dc7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon to icon with name iconName.  <a href="#ab4502afe419fd30402e5e6e7552dc7ec">More...</a><br /></td></tr>
-<tr class="separator:ab4502afe419fd30402e5e6e7552dc7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af69742260304f255fd112009ac9d2b10"><td class="memItemLeft" align="right" valign="top"><a id="af69742260304f255fd112009ac9d2b10"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPicture</b> (const std::string &amp;path)=0</td></tr>
-<tr class="separator:af69742260304f255fd112009ac9d2b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae98672dfd4b677314a5c328f7f75b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a1ae98672dfd4b677314a5c328f7f75b4">setIconByName</a> (const std::string &amp;iconName)=0</td></tr>
+<tr class="memdesc:a1ae98672dfd4b677314a5c328f7f75b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon using name iconName.  <a href="#a1ae98672dfd4b677314a5c328f7f75b4">More...</a><br /></td></tr>
+<tr class="separator:a1ae98672dfd4b677314a5c328f7f75b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c354fda7a17e5925ce569234f34e08f"><td class="memItemLeft" align="right" valign="top"><a id="a6c354fda7a17e5925ce569234f34e08f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setIconByPath</b> (const std::string &amp;path)=0</td></tr>
+<tr class="separator:a6c354fda7a17e5925ce569234f34e08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab43940edad9cb8c4c36a68d9f3205732"><td class="memItemLeft" align="right" valign="top"><a id="ab43940edad9cb8c4c36a68d9f3205732"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TrayIconHandler</b> (<a class="el" href="class_tray_icon_handler.html">TrayIconHandler</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ab43940edad9cb8c4c36a68d9f3205732"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,8 +186,8 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab4502afe419fd30402e5e6e7552dc7ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4502afe419fd30402e5e6e7552dc7ec">&#9670;&nbsp;</a></span>changeIcon()</h2>
+<a id="a1ae98672dfd4b677314a5c328f7f75b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae98672dfd4b677314a5c328f7f75b4">&#9670;&nbsp;</a></span>setIconByName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void TrayIconHandler::changeIcon </td>
+          <td class="memname">virtual void TrayIconHandler::setIconByName </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>iconName</em></td><td>)</td>
@@ -210,7 +210,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </table>
 </div><div class="memdoc">
 
-<p>Changes icon to icon with name iconName. </p>
+<p>Changes icon using name iconName. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">iconName</td><td></td></tr>
@@ -218,7 +218,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_tray_icon_handler_win.html#a0408a5b62521fd6ce9a08d1df9662e79">TrayIconHandlerWin</a>.</p>
+<p>Implemented in <a class="el" href="class_tray_icon_handler_win.html#a9ba68236eb1b746fdf6913a91198cbda">TrayIconHandlerWin</a>.</p>
 
 </div>
 </div>
@@ -258,8 +258,8 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>IconManager/<a class="el" href="_tray_icon_handler_8h_source.html">TrayIconHandler.h</a></li>
-<li>IconManager/TrayIconHandler.cpp</li>
+<li>AnyBarWin/IconManager/<a class="el" href="_tray_icon_handler_8h_source.html">TrayIconHandler.h</a></li>
+<li>AnyBarWin/IconManager/TrayIconHandler.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

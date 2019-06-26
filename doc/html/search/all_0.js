@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['changeicon',['changeIcon',['../class_tray_icon_handler.html#ab4502afe419fd30402e5e6e7552dc7ec',1,'TrayIconHandler::changeIcon()'],['../class_tray_icon_handler_win.html#a0408a5b62521fd6ce9a08d1df9662e79',1,'TrayIconHandlerWin::changeIcon()']]]
+  ['headlessapp',['HeadlessApp',['../class_headless_app.html',1,'']]],
+  ['headlessappwin',['HeadlessAppWin',['../class_headless_app_win.html',1,'']]]
 ];

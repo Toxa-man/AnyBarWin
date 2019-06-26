@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pipetype',['PipeType',['../class_named_pipe.html#a94b9f493603894845f946653fb60e398',1,'NamedPipe']]]
+  ['read',['read',['../class_named_pipe.html#ace9d50158c44e38260f109222409cc9a',1,'NamedPipe::read()'],['../class_named_pipe_win.html#abc0f99ad102927ee1e2ad36a2208b76c',1,'NamedPipeWin::read()']]]
 ];
