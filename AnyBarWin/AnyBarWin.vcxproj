@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Protocol;F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\App;F:\dev\AnyBarWin\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\App;$(SolutionDir)\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -87,6 +87,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\App;$(SolutionDir)\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -98,7 +99,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>F:\dev\AnyBarWin\AnyBarWin\Protocol;F:\dev\AnyBarWin\AnyBarWin\Pipes;F:\dev\AnyBarWin\AnyBarWin\App;F:\dev\AnyBarWin\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\App;$(SolutionDir)\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -114,6 +115,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\App;$(SolutionDir)\AnyBarWin\IconManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
