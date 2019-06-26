@@ -18,3 +18,6 @@ Or alternatively you can use Native Tools Command Promt for VS
 AnyBarWin consists of 2 parts: `AnyBarWin` - server and `AnyBarWinClient` - client    
 To start using application first run server and then change icons by using client from command prompt  
 To see list of available commands run client without arguments
+
+## Details
+The app is using named pipes from WinApi. You can find auto-generated documentation by doxygen in `doc\html\index.html`
