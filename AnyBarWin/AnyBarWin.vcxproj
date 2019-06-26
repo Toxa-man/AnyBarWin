@@ -128,7 +128,6 @@
     <ClCompile Include="IconManager\TrayIconHandler.cpp" />
     <ClCompile Include="IconManager\TrayIconHandlerWin.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pipes\NamedPipe.cpp" />
     <ClCompile Include="Pipes\NamedPipeWin.cpp" />
     <ClCompile Include="Protocol\Protocol.cpp" />
     <ClCompile Include="Utils.cpp" />

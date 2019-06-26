@@ -24,9 +24,6 @@
     <ClCompile Include="..\AnyBarWin\Pipes\NamedPipeWin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\AnyBarWin\Pipes\NamedPipe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\AnyBarWin\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
