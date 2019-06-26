@@ -22,7 +22,7 @@ To start using application first run server and then change icons by using clien
 To see list of available commands run client without arguments  
 
 
-**Notice:** For now, thy only available icon format is .ico
+**Notice:** For now, the only available icon format is .ico
 
 ## Details
 The app is using named pipes from WinApi. You can find auto-generated documentation by doxygen in `doc\html\index.html`
