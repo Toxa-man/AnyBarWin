@@ -13,13 +13,14 @@ TrayIconHandler(
         {"red", IDI_RED},
         {"green", IDI_GREEN},
         {"blue", IDI_BLUE},
-        {"question", IDI_QUEST}
+        {"question", IDI_QUEST},
+        {"transparent", IDI_TRANSPARENT}
         }
                 ),
     id{ getNewId() }
     
 {
-    auto defaultIcon = loadIconFromResource("white");
+    auto defaultIcon = loadIconFromResource("transparent");
 
     if (!defaultIcon) {
         Utils::debug("Failed to load icon with id: ", strToIconId("white"));

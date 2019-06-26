@@ -93,5 +93,8 @@
     <Image Include="Assets\question.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Assets\transparent.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

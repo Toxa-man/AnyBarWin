@@ -152,6 +152,7 @@
     <Image Include="Assets\green.ico" />
     <Image Include="Assets\question.ico" />
     <Image Include="Assets\red.ico" />
+    <Image Include="Assets\transparent.ico" />
     <Image Include="Assets\white.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
