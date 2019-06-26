@@ -1,5 +1,5 @@
 # AnyBarWin
-Client-server app that allows you to change icon color in tray
+Client-server app that allows you to change icons in tray
 
 ## Building
 In order to build the solution you would need MS Visual Studio Ver. >= 2017 with compiller that supports C++17  
