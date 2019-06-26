@@ -30,7 +30,7 @@ TrayIconHandler(
     notifyData.cbSize = sizeof(NOTIFYICONDATA);
     notifyData.hWnd = hWnd;        
     notifyData.uID = id;          
-    notifyData.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
+    notifyData.uFlags = NIF_ICON | NIF_TIP;
     notifyData.hIcon = defaultIcon;
     strcpy_s(notifyData.szTip, "It Works!");
     Shell_NotifyIcon(NIM_ADD, &notifyData);
