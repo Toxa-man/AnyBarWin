@@ -15,15 +15,17 @@ public:
     ~TrayIconHandlerWin();
     TrayIconHandlerWin(TrayIconHandlerWin&& other) noexcept;
     TrayIconHandlerWin& operator = (TrayIconHandlerWin&& other) noexcept;
-    void changeIcon(const std::string& iconName) override;
-    void setPicture(const std::string& path) override;
+    void setIconByName(const std::string& iconName) override;
+    void setIconByPath(const std::string& path) override;
+    void setShellNotifyIcon(HICON hIcon);
 private:
     /**
      * \brief Loads icon from resources using mapper from base class to determine id
      * \param iconName 
      * \return handle to icon
      */
-    HICON loadIcon(const std::string& iconName);
+    HICON loadIconFromResource(const std::string& iconName);
+    static HICON loadIconFromFile(const std::string& path);
     /**
      * \brief Generates unique id for each class instance
      * \return generated id

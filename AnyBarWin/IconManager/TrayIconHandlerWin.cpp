@@ -19,7 +19,7 @@ TrayIconHandler(
     id{ getNewId() }
     
 {
-    auto defaultIcon = loadIcon("white");
+    auto defaultIcon = loadIconFromResource("white");
 
     if (!defaultIcon) {
         Utils::debug("Failed to load icon with id: ", strToIconId("white"));
@@ -65,22 +65,28 @@ TrayIconHandlerWin& TrayIconHandlerWin::operator=(TrayIconHandlerWin&& other) no
     return *this;
 }
 
-void TrayIconHandlerWin::changeIcon(const std::string& iconName)
+void TrayIconHandlerWin::setIconByName(const std::string& iconName)
 {
-    auto iconHandle = loadIcon(iconName);
-    if (!iconHandle) {
+    setShellNotifyIcon(loadIconFromResource(iconName));
+}
+
+void TrayIconHandlerWin::setIconByPath(const std::string& path)
+{
+    setShellNotifyIcon(loadIconFromFile(path));
+}
+
+void TrayIconHandlerWin::setShellNotifyIcon(HICON hIcon)
+{
+    if (!hIcon) {
+        Utils::debug("Can't set shell notify icon");
+        Utils::debug("Last error: ", GetLastError());
         return;
     }
-    notifyData.hIcon = iconHandle;
+    notifyData.hIcon = hIcon;
     Shell_NotifyIcon(NIM_MODIFY, &notifyData);
 }
 
-void TrayIconHandlerWin::setPicture(const std::string& path)
-{
-    //TODO: implement me
-}
-
-HICON TrayIconHandlerWin::loadIcon(const std::string& iconName)
+HICON TrayIconHandlerWin::loadIconFromResource(const std::string& iconName)
 {
     auto iconId = strToIconId(iconName);
     if (iconId == -1) {
@@ -90,6 +96,20 @@ HICON TrayIconHandlerWin::loadIcon(const std::string& iconName)
         MAKEINTRESOURCE(iconId), IMAGE_ICON,
         0,
         0, 0));
+}
+
+HICON TrayIconHandlerWin::loadIconFromFile(const std::string& path)
+{
+    return static_cast<HICON>(LoadImage(
+        nullptr,             
+        path.c_str(),  
+        IMAGE_BITMAP,      
+        0,              
+        0,                
+        LR_LOADFROMFILE |  
+        LR_DEFAULTSIZE |
+        LR_SHARED        
+    ));
 }
 
 UINT TrayIconHandlerWin::getNewId()

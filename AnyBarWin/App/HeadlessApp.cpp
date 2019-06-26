@@ -14,8 +14,8 @@ void HeadlessApp::startEventLoop()
         try {
             auto[command, message] = Protocol::unpackMessage(data.data(), data.size());
             switch (command) {
-            case Protocol::Icon: iconHandler->changeIcon(message); break;
-            case Protocol::Path: iconHandler->setPicture(message); break;
+            case Protocol::Icon: iconHandler->setIconByName(message); break;
+            case Protocol::Path: iconHandler->setIconByPath(message); break;
             case Protocol::Quit: exit = true; break;
             default:
                 Utils::debug("Wrong type of command: ", command);

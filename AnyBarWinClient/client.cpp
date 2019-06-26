@@ -21,6 +21,6 @@ int main(int argc, char* argv[])
         }
 
     } else {
-        pipe.write(Protocol::packMessage(Protocol::Path, argv[1]));
+        pipe.write(Protocol::packMessage(Protocol::Path, argv[2]));
     }
 }

@@ -16,11 +16,11 @@ public:
      */
     explicit TrayIconHandler(const std::unordered_map<std::string, int32_t>& mapper);
     /**
-     * \brief Changes icon to icon with name iconName
+     * \brief Changes icon using name iconName
      * \param iconName 
      */
-    virtual void changeIcon(const std::string& iconName) = 0;
-    virtual void setPicture(const std::string& path) = 0;
+    virtual void setIconByName(const std::string& iconName) = 0;
+    virtual void setIconByPath(const std::string& path) = 0;
     virtual ~TrayIconHandler() = default;
     TrayIconHandler(TrayIconHandler&&) = default;
     TrayIconHandler(const TrayIconHandler&) = delete;
