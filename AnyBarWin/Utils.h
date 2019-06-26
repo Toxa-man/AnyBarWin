@@ -12,7 +12,7 @@ namespace Utils
 {
     namespace Details
     {
-        static std::function<void(const char*)> debugFunc
+        static std::function<void(const char*)> OSPrintFunc
 
 #ifdef _WIN32
             = OutputDebugString
@@ -22,8 +22,14 @@ namespace Utils
 #endif
             ;
 
+        std::string getCurrentTime();
+
+        static constexpr bool loggingEnabled = true;
+
+        void debugFunc(const char* str);
+
         /**
-         * \brief Determines the type category of T and perfoms relevant conversions to const char* 
+         * \brief Determines the type category of T and performs relevant conversions to const char* 
          * \tparam T argument type
          * \param t argument value
          * 
@@ -58,6 +64,9 @@ namespace Utils
     void debug(Args&&... args)
     {
         using Details::print;
+        if constexpr (Details::loggingEnabled){
+            print(Details::getCurrentTime());
+        }
         (..., print(std::forward<Args>(args)));
         print('\n');
 

@@ -134,6 +134,7 @@
     <ClCompile Include="..\AnyBarWin\Pipes\NamedPipe.cpp" />
     <ClCompile Include="..\AnyBarWin\Pipes\NamedPipeWin.cpp" />
     <ClCompile Include="..\AnyBarWin\Protocol\Protocol.cpp" />
+    <ClCompile Include="..\AnyBarWin\Utils.cpp" />
     <ClCompile Include="client.cpp" />
   </ItemGroup>
   <ItemGroup>
