@@ -15,7 +15,7 @@ public:
     ~TrayIconHandlerWin();
     TrayIconHandlerWin(TrayIconHandlerWin&& other) noexcept;
     TrayIconHandlerWin& operator = (TrayIconHandlerWin&& other) noexcept;
-    void setIconByName(const std::string& iconName) override;
+    void setIconByName(Protocol::IconName iconName) override;
     void setIconByPath(const std::string& path) override;
     void setShellNotifyIcon(HICON hIcon);
 private:
@@ -24,7 +24,7 @@ private:
      * \param iconName 
      * \return handle to icon
      */
-    HICON loadIconFromResource(const std::string& iconName);
+    HICON loadIconFromResource(Protocol::IconName iconName);
     static HICON loadIconFromFile(const std::string& path);
     /**
      * \brief Generates unique id for each class instance

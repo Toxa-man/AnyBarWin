@@ -1,9 +1,23 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <unordered_map>
 
 namespace Protocol {
     enum CommandType { Icon, Path, Quit };
+
+    enum IconName {Transparent, Red, White, Green, Blue, Question};
+
+    const std::string pipeName = "anyBar";
+
+    const std::unordered_map<std::string, IconName> iconNamesMapper = {
+        {"transparent", Transparent},
+        {"red", Red},
+        {"white", White},
+        {"green", Green},
+        {"blue", Blue},
+        {"question", Question},
+    };
 
     /**
      * \brief Packs message to vector<char>

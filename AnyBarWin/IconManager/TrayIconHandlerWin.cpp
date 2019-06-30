@@ -7,30 +7,30 @@ std::set<UINT> TrayIconHandlerWin::ids {};
 std::mt19937 TrayIconHandlerWin::generator{ std::random_device{}() };
 
 TrayIconHandlerWin::TrayIconHandlerWin(HWND hWnd):
-TrayIconHandler(
-{
-        {"white", IDI_WHITE},
-        {"red", IDI_RED},
-        {"green", IDI_GREEN},
-        {"blue", IDI_BLUE},
-        {"question", IDI_QUEST},
-        {"transparent", IDI_TRANSPARENT}
+    TrayIconHandler(
+        {
+            {Protocol::White, IDI_WHITE},
+            {Protocol::Red, IDI_RED},
+            {Protocol::Green, IDI_GREEN},
+            {Protocol::Blue, IDI_BLUE},
+            {Protocol::Question, IDI_QUEST},
+            {Protocol::Transparent, IDI_TRANSPARENT}
         }
-                ),
-    id{ getNewId() }
-    
+    ),
+    id{getNewId()}
+
 {
-    auto defaultIcon = loadIconFromResource("transparent");
+    auto defaultIcon = loadIconFromResource(Protocol::Transparent);
 
     if (!defaultIcon) {
-        Utils::debug("Failed to load icon with id: ", strToIconId("white"));
+        Utils::debug("Failed to load icon with id: ", iconNameToId(Protocol::Transparent));
         Utils::debug("last error: ", GetLastError());
         return;
     }
 
     notifyData.cbSize = sizeof(NOTIFYICONDATA);
-    notifyData.hWnd = hWnd;        
-    notifyData.uID = id;          
+    notifyData.hWnd = hWnd;
+    notifyData.uID = id;
     notifyData.uFlags = NIF_ICON | NIF_TIP;
     notifyData.hIcon = defaultIcon;
     strcpy_s(notifyData.szTip, "It Works!");
@@ -66,7 +66,7 @@ TrayIconHandlerWin& TrayIconHandlerWin::operator=(TrayIconHandlerWin&& other) no
     return *this;
 }
 
-void TrayIconHandlerWin::setIconByName(const std::string& iconName)
+void TrayIconHandlerWin::setIconByName(Protocol::IconName iconName)
 {
     setShellNotifyIcon(loadIconFromResource(iconName));
 }
@@ -87,9 +87,9 @@ void TrayIconHandlerWin::setShellNotifyIcon(HICON hIcon)
     Shell_NotifyIcon(NIM_MODIFY, &notifyData);
 }
 
-HICON TrayIconHandlerWin::loadIconFromResource(const std::string& iconName)
+HICON TrayIconHandlerWin::loadIconFromResource(Protocol::IconName iconName)
 {
-    auto iconId = strToIconId(iconName);
+    auto iconId = iconNameToId(iconName);
     if (iconId == -1) {
         return nullptr;
     }
