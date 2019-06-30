@@ -4,7 +4,7 @@
 #include <unordered_map>
 
 namespace Protocol {
-    enum CommandType { Icon, Path, Quit };
+    enum CommandType {Invalid, Icon, Path, Quit };
 
     enum IconName {Transparent, Red, White, Green, Blue, Question};
 
