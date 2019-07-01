@@ -110,7 +110,7 @@ HICON TrayIconHandlerWin::loadIconFromFile(const std::string& path)
     return static_cast<HICON>(LoadImage(
         nullptr,             
         path.c_str(),  
-        IMAGE_BITMAP,      
+        IMAGE_ICON,
         0,              
         0,                
         LR_LOADFROMFILE |  
