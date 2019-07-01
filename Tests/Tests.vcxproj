@@ -33,13 +33,18 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="..\AnyBarWinClient\ClientLogic.h" />
+    <ClInclude Include="..\AnyBarWin\Pipes\NamedPipeWin.h" />
     <ClInclude Include="..\AnyBarWin\Protocol\Protocol.h" />
     <ClInclude Include="..\AnyBarWin\Utils.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\AnyBarWinClient\ClientLogic.cpp" />
+    <ClCompile Include="..\AnyBarWin\Pipes\NamedPipeWin.cpp" />
     <ClCompile Include="..\AnyBarWin\Protocol\Protocol.cpp" />
     <ClCompile Include="..\AnyBarWin\Utils.cpp" />
+    <ClCompile Include="ClientTests.cpp" />
     <ClCompile Include="DebugTest.cpp" />
     <ClCompile Include="ProtocolTest.cpp" />
     <ClCompile Include="pch.cpp">
@@ -73,6 +78,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -89,6 +95,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -103,6 +110,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Pipes;$(SolutionDir)\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -119,6 +127,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)\AnyBarWin\Protocol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

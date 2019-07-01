@@ -139,11 +139,13 @@
     <ClCompile Include="..\AnyBarWin\Protocol\Protocol.cpp" />
     <ClCompile Include="..\AnyBarWin\Utils.cpp" />
     <ClCompile Include="client.cpp" />
+    <ClCompile Include="ClientLogic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AnyBarWin\Pipes\NamedPipe.h" />
     <ClInclude Include="..\AnyBarWin\Pipes\NamedPipeWin.h" />
     <ClInclude Include="..\AnyBarWin\Protocol\Protocol.h" />
+    <ClInclude Include="ClientLogic.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

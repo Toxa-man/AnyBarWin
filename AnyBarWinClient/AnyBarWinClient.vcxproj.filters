@@ -27,6 +27,9 @@
     <ClCompile Include="..\AnyBarWin\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ClientLogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AnyBarWin\Pipes\NamedPipe.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\AnyBarWin\Protocol\Protocol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientLogic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
