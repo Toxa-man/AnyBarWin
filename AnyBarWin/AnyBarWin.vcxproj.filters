@@ -93,5 +93,23 @@
     <Image Include="Assets\transparent.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Assets\exclamation.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\black.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\purple.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\cyan.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\yellow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\orange.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

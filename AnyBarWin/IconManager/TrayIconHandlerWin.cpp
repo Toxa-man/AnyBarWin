@@ -14,7 +14,13 @@ TrayIconHandlerWin::TrayIconHandlerWin(HWND hWnd):
             {Protocol::Green, IDI_GREEN},
             {Protocol::Blue, IDI_BLUE},
             {Protocol::Question, IDI_QUEST},
-            {Protocol::Transparent, IDI_TRANSPARENT}
+            {Protocol::Transparent, IDI_TRANSPARENT},
+            {Protocol::Exclamation, IDI_EXCLAM},
+            {Protocol::Black, IDI_BLACK},
+            {Protocol::Yellow, IDI_YELLOW},
+            {Protocol::Orange, IDI_ORANGE},
+            {Protocol::Purple, IDI_PURPLE},
+            {Protocol::Cyan, IDI_CYAN},
         }
     ),
     id{getNewId()}

@@ -6,7 +6,7 @@
 namespace Protocol {
     enum CommandType {Invalid, Icon, Path, Quit };
 
-    enum IconName {Transparent, Red, White, Green, Blue, Question};
+    enum IconName {Transparent, Red, White, Green, Blue, Question, Exclamation, Black, Orange, Yellow, Cyan, Purple};
 
     const std::string pipeName = "anyBar";
 
@@ -17,6 +17,12 @@ namespace Protocol {
         {"green", Green},
         {"blue", Blue},
         {"question", Question},
+        {"exclamation", Exclamation},
+        {"black", Black},
+        {"orange", Orange},
+        {"yellow", Yellow},
+        {"cyan", Cyan},
+        {"purple", Purple},
     };
 
     /**

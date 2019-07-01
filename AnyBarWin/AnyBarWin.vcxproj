@@ -151,12 +151,18 @@
     <ResourceCompile Include="AnyBarWin.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\black.ico" />
     <Image Include="Assets\blue.ico" />
+    <Image Include="Assets\cyan.ico" />
+    <Image Include="Assets\exclamation.ico" />
     <Image Include="Assets\green.ico" />
+    <Image Include="Assets\orange.ico" />
+    <Image Include="Assets\purple.ico" />
     <Image Include="Assets\question.ico" />
     <Image Include="Assets\red.ico" />
     <Image Include="Assets\transparent.ico" />
     <Image Include="Assets\white.ico" />
+    <Image Include="Assets\yellow.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

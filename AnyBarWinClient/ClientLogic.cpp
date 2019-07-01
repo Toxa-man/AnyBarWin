@@ -14,8 +14,9 @@ void printUsage()
     std::cout << "Usage: " << std::endl << std::endl <<
         "  " << "anybar" << " <image_name>" << std::endl <<
         "  " << "anybar" << " path" << " <path_to_file>" << std::endl <<
+        "  " << "anybar" << " start " << std::endl <<
         "  " << "anybar" << " quit" << std::endl << std::endl;
-    std::cout << "available images: transparent, white, red, green, blue, question" << std::endl;
+    std::cout << "available images: transparent, white, red, green, blue, question, \n  exclamation, orange, yellow, purple, black, cyan" << std::endl;
 }
 
 void toLower(std::string& str)
