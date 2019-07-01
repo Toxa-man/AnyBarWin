@@ -10,7 +10,7 @@ namespace Protocol {
 
     const std::string pipeName = "anyBar";
 
-    const std::unordered_map<std::string, IconName> iconNamesMapper = {
+    const std::unordered_map<std::string_view, IconName> iconNamesMapper = {
         {"transparent", Transparent},
         {"red", Red},
         {"white", White},
