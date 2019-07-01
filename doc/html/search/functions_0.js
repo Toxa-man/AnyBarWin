@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makepipe',['makePipe',['../class_headless_app.html#a0f1a7c169c7389de8d7326f8696c6265',1,'HeadlessApp']]]
+  ['iconnametoid',['iconNameToId',['../class_tray_icon_handler.html#a93155f76f23fdb0e60a045716c4684ed',1,'TrayIconHandler']]]
 ];

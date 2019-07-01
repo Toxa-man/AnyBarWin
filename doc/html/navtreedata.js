@@ -43,7 +43,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_headless_app_8h_source.html"
+"_client_logic_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('class_tray_icon_handler.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -111,14 +112,20 @@ Inheritance diagram for TrayIconHandler:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a152b923a92b4e9e4f7e2b72deab9aa03"><td class="memItemLeft" align="right" valign="top"><a id="a152b923a92b4e9e4f7e2b72deab9aa03"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Mapper</b> = std::unordered_map&lt; Protocol::IconName, int32_t &gt;</td></tr>
+<tr class="separator:a152b923a92b4e9e4f7e2b72deab9aa03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a352726314ab7f58aee3c4a0a2c2f7cee">TrayIconHandler</a> (const std::unordered_map&lt; std::string, int32_t &gt; &amp;mapper)</td></tr>
-<tr class="memdesc:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using mapper.  <a href="#a352726314ab7f58aee3c4a0a2c2f7cee">More...</a><br /></td></tr>
-<tr class="separator:a352726314ab7f58aee3c4a0a2c2f7cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae98672dfd4b677314a5c328f7f75b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a1ae98672dfd4b677314a5c328f7f75b4">setIconByName</a> (const std::string &amp;iconName)=0</td></tr>
-<tr class="memdesc:a1ae98672dfd4b677314a5c328f7f75b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon using name iconName.  <a href="#a1ae98672dfd4b677314a5c328f7f75b4">More...</a><br /></td></tr>
-<tr class="separator:a1ae98672dfd4b677314a5c328f7f75b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f3f9369c17407f705699f92cb42bfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a46f3f9369c17407f705699f92cb42bfb">TrayIconHandler</a> (const Mapper &amp;mapper)</td></tr>
+<tr class="memdesc:a46f3f9369c17407f705699f92cb42bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using name mapper.  <a href="#a46f3f9369c17407f705699f92cb42bfb">More...</a><br /></td></tr>
+<tr class="separator:a46f3f9369c17407f705699f92cb42bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1e50a40bf6610083f4f18c3aa2e7c0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#acd1e50a40bf6610083f4f18c3aa2e7c0">setIconByName</a> (Protocol::IconName iconName)=0</td></tr>
+<tr class="memdesc:acd1e50a40bf6610083f4f18c3aa2e7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes icon using name iconName.  <a href="#acd1e50a40bf6610083f4f18c3aa2e7c0">More...</a><br /></td></tr>
+<tr class="separator:acd1e50a40bf6610083f4f18c3aa2e7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c354fda7a17e5925ce569234f34e08f"><td class="memItemLeft" align="right" valign="top"><a id="a6c354fda7a17e5925ce569234f34e08f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setIconByPath</b> (const std::string &amp;path)=0</td></tr>
 <tr class="separator:a6c354fda7a17e5925ce569234f34e08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,22 +144,22 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setIconByPath
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6a05869263c1ae3b6644b293507ee642"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a6a05869263c1ae3b6644b293507ee642">strToIconId</a> (const std::string &amp;data)</td></tr>
-<tr class="memdesc:a6a05869263c1ae3b6644b293507ee642"><td class="mdescLeft">&#160;</td><td class="mdescRight">maps string name of icon to it's OS-specific id  <a href="#a6a05869263c1ae3b6644b293507ee642">More...</a><br /></td></tr>
-<tr class="separator:a6a05869263c1ae3b6644b293507ee642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93155f76f23fdb0e60a045716c4684ed"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tray_icon_handler.html#a93155f76f23fdb0e60a045716c4684ed">iconNameToId</a> (Protocol::IconName name)</td></tr>
+<tr class="memdesc:a93155f76f23fdb0e60a045716c4684ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">maps enum name of icon to it's OS-specific id  <a href="#a93155f76f23fdb0e60a045716c4684ed">More...</a><br /></td></tr>
+<tr class="separator:a93155f76f23fdb0e60a045716c4684ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:af6c23bb7162d5f069fc8fc0fa6f87c4d"><td class="memItemLeft" align="right" valign="top"><a id="af6c23bb7162d5f069fc8fc0fa6f87c4d"></a>
-std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>iconMapper</b></td></tr>
-<tr class="separator:af6c23bb7162d5f069fc8fc0fa6f87c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aaec3abb1388014b07c6ec7aaaf00a"><td class="memItemLeft" align="right" valign="top"><a id="a74aaec3abb1388014b07c6ec7aaaf00a"></a>
+std::unordered_map&lt; Protocol::IconName, int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>iconMapper</b></td></tr>
+<tr class="separator:a74aaec3abb1388014b07c6ec7aaaf00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents the manager of unique icon in OS. </p>
 <p>The class satisfies the requirements of MoveConstructible and MoveAssignable, but not the requirements of either CopyConstructible or CopyAssignable. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a352726314ab7f58aee3c4a0a2c2f7cee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a352726314ab7f58aee3c4a0a2c2f7cee">&#9670;&nbsp;</a></span>TrayIconHandler()</h2>
+<a id="a46f3f9369c17407f705699f92cb42bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f3f9369c17407f705699f92cb42bfb">&#9670;&nbsp;</a></span>TrayIconHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +170,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
         <tr>
           <td class="memname">TrayIconHandler::TrayIconHandler </td>
           <td>(</td>
-          <td class="paramtype">const std::unordered_map&lt; std::string, int32_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const Mapper &amp;&#160;</td>
           <td class="paramname"><em>mapper</em></td><td>)</td>
           <td></td>
         </tr>
@@ -175,10 +182,10 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </table>
 </div><div class="memdoc">
 
-<p>Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using mapper. </p>
+<p>Creates <a class="el" href="class_tray_icon_handler.html" title="Represents the manager of unique icon in OS.">TrayIconHandler</a> using name mapper. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mapper</td><td>- Matches string name of icon and it's OS-specific id </td></tr>
+    <tr><td class="paramname">mapper</td><td>Matches icon name from enum with it's OS-specific id </td></tr>
   </table>
   </dd>
 </dl>
@@ -186,8 +193,43 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ae98672dfd4b677314a5c328f7f75b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ae98672dfd4b677314a5c328f7f75b4">&#9670;&nbsp;</a></span>setIconByName()</h2>
+<a id="a93155f76f23fdb0e60a045716c4684ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93155f76f23fdb0e60a045716c4684ed">&#9670;&nbsp;</a></span>iconNameToId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t TrayIconHandler::iconNameToId </td>
+          <td>(</td>
+          <td class="paramtype">Protocol::IconName&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maps enum name of icon to it's OS-specific id </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return OS-specific icon id and -1 if no such icon was found </dd></dl>
+
+</div>
+</div>
+<a id="acd1e50a40bf6610083f4f18c3aa2e7c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1e50a40bf6610083f4f18c3aa2e7c0">&#9670;&nbsp;</a></span>setIconByName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +240,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
         <tr>
           <td class="memname">virtual void TrayIconHandler::setIconByName </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">Protocol::IconName&#160;</td>
           <td class="paramname"><em>iconName</em></td><td>)</td>
           <td></td>
         </tr>
@@ -218,42 +260,7 @@ std::unordered_map&lt; std::string, int32_t &gt;&#160;</td><td class="memItemRig
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_tray_icon_handler_win.html#a9ba68236eb1b746fdf6913a91198cbda">TrayIconHandlerWin</a>.</p>
-
-</div>
-</div>
-<a id="a6a05869263c1ae3b6644b293507ee642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a05869263c1ae3b6644b293507ee642">&#9670;&nbsp;</a></span>strToIconId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t TrayIconHandler::strToIconId </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>maps string name of icon to it's OS-specific id </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>return OS-specific icon id and -1 if no such icon was found </dd></dl>
+<p>Implemented in <a class="el" href="class_tray_icon_handler_win.html#a3152d4d133aa6896de097faea06ac7dc">TrayIconHandlerWin</a>.</p>
 
 </div>
 </div>
